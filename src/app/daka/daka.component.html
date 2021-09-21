@@ -1,0 +1,45 @@
+<div style="text-align:center;">
+  <h1>
+    打卡
+  </h1>
+  <div class="example-button-container">
+    <button (click)="daka()" style="width: 100px;height: 100px;margin-bottom: 50px;margin-bottom: 75px;" mat-fab color="primary" aria-label="Example icon button with a home icon">
+    </button>
+  </div>
+</div>
+<div style="text-align:center;">
+  <button style="width: 100%;" mat-raised-button> 最近三次记录 </button>
+</div>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  <!--- Note that these columns can be defined in any order.
+  The actual rendered columns are set as a property on the row definition" -->
+  <!-- Position Column -->
+  <ng-container matColumnDef="day">
+    <th mat-header-cell *matHeaderCellDef> 日期 </th>
+    <td mat-cell *matCellDef="let element"> {{element.day}} </td>
+  </ng-container>
+  <ng-container matColumnDef="amTime">
+    <th mat-header-cell *matHeaderCellDef> 上班 </th>
+    <td mat-cell *matCellDef="let element"> {{element.amTime}} </td>
+  </ng-container>
+  <!-- Name Column -->
+  <ng-container matColumnDef="apTime">
+    <th mat-header-cell *matHeaderCellDef> 下班 </th>
+    <td mat-cell *matCellDef="let element"> {{element.apTime}} </td>
+  </ng-container>
+  <!-- Weight Column -->
+  <ng-container matColumnDef="amTimeFormat">
+    <th mat-header-cell *matHeaderCellDef> 上班整点调整 </th>
+    <td mat-cell *matCellDef="let element"> {{element.amTimeFormat}} </td>
+  </ng-container>
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="apTimeFormat">
+    <th mat-header-cell *matHeaderCellDef> 下班整点调整 </th>
+    <td mat-cell *matCellDef="let element"> {{element.apTimeFormat}} </td>
+  </ng-container>
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+<div style="text-align:center;">
+  <button style="width: 100%;" mat-raised-button (click)="detail()"> 更多 </button>
+</div>
