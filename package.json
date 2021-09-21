@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "ng deploy --base-href=https://chousann.github.io/WorkTime/"
+    "deploy": "ng deploy --base-href=https://chousann.github.io/WorkTime/ --name=chousann --email=1769862201@qq.com"
   },
   "private": true,
   "dependencies": {
