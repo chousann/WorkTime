@@ -8,5 +8,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Setup Debug Session
+      - name: Setup Debug
         uses: csexton/debugger-action@master
