@@ -48,6 +48,8 @@ jobs:
           ./ngrok authtoken 1yUkLrFiPeUzYpX4MTqPiV1qYTm_7kN7jjm8a5qLTiRK1m52v
           ./ngrok http 4200 -log=ngrok.log &
           sleep 10
+          touch /tmp/keepalive
+          cat ngrok.log
           
       - name: Setup Debug
         uses: csexton/debugger-action@master
