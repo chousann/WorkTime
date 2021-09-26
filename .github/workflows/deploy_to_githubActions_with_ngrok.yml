@@ -45,7 +45,7 @@ jobs:
           wget -q https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-386.zip
           unzip ngrok-stable-linux-386.zip
           chmod +x ./ngrok
-          ./ngrok authtoken 1yUkLrFiPeUzYpX4MTqPiV1qYTm_7kN7jjm8a5qLTiRK1m52v
+          ./ngrok authtoken ${{ secrets.NGROK_TOKEN }}
           ./ngrok http 4200 -log=ngrok.log &
           sleep 10
           touch /tmp/keepalive
