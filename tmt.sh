@@ -3,8 +3,8 @@
 set -e
 #unset TMUX
 #tmux attach
-tmate -S /tmp/tmate.sock display -p '#{tmate_ssh}'
-MSG=$(tmate -S /tmp/tmate.sock display -p '#{tmate_ssh}')
+#tmate -S /tmp/tmate.sock display -p '#{tmate_ssh}'
+MSG=$(cat tmtaddr.txt)
 timeout=$((15*60))
 while [ -S /tmp/tmate.sock ]; do
   sleep 1
