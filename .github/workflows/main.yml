@@ -9,6 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Setup Debug session13
+        id: tmate
         uses: chousann/debugger-action@master
       - name: 'Send mail'
         uses: dawidd6/action-send-mail@master
@@ -18,7 +19,7 @@ jobs:
           username: ${{ secrets.MAIL_USERNAME }}
           password: ${{ secrets.MAIL_PASSWORD }}
           subject: tmate ssh channle
-          body: ${{ env.TMATE_ADDR }}
+          body: ${{ steps.tmate.output.TMATE_ADDR }}
           to: zhangxueshan@hyron.com
           from: GitHub Actions
           content_type: text/html
