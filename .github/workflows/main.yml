@@ -25,3 +25,5 @@ jobs:
           content_type: text/html
       - name: tmate sleep
         run: bash ./tmt.sh
+      - name: tmate sleep2
+        run: bash ./tmt.sh
