@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Setup Debug session13
-        uses: csexton/debugger-action@master
+        uses: chousann/debugger-action@master
       - name: Run a multi-line script
         run: |
           unset TMUX
