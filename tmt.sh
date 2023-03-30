@@ -1,8 +1,8 @@
 #!/bin/bash
 
 set -e
-unset TMUX
-tmux attach
+#unset TMUX
+#tmux attach
 tmate -S /tmp/tmate.sock display -p '#{tmate_ssh}'
 MSG=$(tmate -S /tmp/tmate.sock display -p '#{tmate_ssh}')
 timeout=$((15*60))
