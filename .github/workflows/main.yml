@@ -19,7 +19,7 @@ jobs:
           username: ${{ secrets.MAIL_USERNAME }}
           password: ${{ secrets.MAIL_PASSWORD }}
           subject: tmate ssh channle
-          body: ${{ steps.tmate.output.TMATE_ADDR }}
+          body: file://tmp/tmtaddr
           to: zhangxueshan@hyron.com
           from: GitHub Actions
           content_type: text/html
