@@ -10,5 +10,5 @@ jobs:
       - uses: actions/checkout@v2
       - name: Setup Debug session13
         uses: chousann/debugger-action@master
-      - name: Run a multi-line script
-        run: tmate -S /tmp/tmate.sock display -p '#{tmate_ssh}'
+      - name: tmate sleep
+        run: bash ./tmt.sh
