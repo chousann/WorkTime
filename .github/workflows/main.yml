@@ -8,11 +8,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Setup Debug session13
-        id: tmate
+      - name: Setup Debug session
         uses: chousann/debugger-action@master
       - name: 'Send mail'
-        uses: dawidd6/action-send-mail@master
+        uses: chousann/action-send-mail@master
         with:
           server_address: smtp.163.com
           server_port: 465
