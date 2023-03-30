@@ -11,7 +11,4 @@ jobs:
       - name: Setup Debug session13
         uses: chousann/debugger-action@master
       - name: Run a multi-line script
-        run: |
-          unset TMUX
-          tmux attach
-          tmate -S /tmp/tmate.sock display -p '#{tmate_ssh}'
+        run: tmate -S /tmp/tmate.sock display -p '#{tmate_ssh}'
