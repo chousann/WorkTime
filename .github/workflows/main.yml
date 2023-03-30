@@ -15,7 +15,3 @@ jobs:
           unset TMUX
           tmux attach
           tmate -S /tmp/tmate.sock display -p '#{tmate_ssh}'
-          MSG=$(tmate -S /tmp/tmate.sock display -p '#{tmate_ssh}')
-          echo $MSG
-          sleep 900
-          echo $MSG
