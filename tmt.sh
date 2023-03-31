@@ -4,7 +4,7 @@ set -e
 #unset TMUX
 #tmux attach
 #tmate -S /tmp/tmate.sock display -p '#{tmate_ssh}'
-MSG=$(cat tmtaddr.txt)
+MSG=$(cat mail.txt)
 timeout=$((180*60))
 while (( timeout > 0 )); do
   sleep 1
