@@ -5,8 +5,8 @@ set -e
 #tmux attach
 #tmate -S /tmp/tmate.sock display -p '#{tmate_ssh}'
 MSG=$(cat tmtaddr.txt)
-timeout=$((15*60))
-while [ -S /tmp/tmate.sock ]; do
+timeout=$((180*60))
+while (( timeout > 0 )); do
   sleep 1
   timeout=$(($timeout-1))
     if (( $timeout%30 == 0 )); then
@@ -19,3 +19,5 @@ while [ -S /tmp/tmate.sock ]; do
     fi
   fi
 done
+echo Waiting on tmate connection timed out!
+exit 1
