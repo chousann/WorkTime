@@ -1,0 +1,28 @@
+name: debugger-action
+on:
+  push:
+    branches:
+      - debugger-action
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      #- uses: actions/checkout@v2
+      #- name: Setup Debug session
+      #  uses: chousann/debugger-action@master
+      #- name: 'Send mail'
+      #  uses: chousann/action-send-mail@master
+      #  with:
+      #    server_address: smtp.163.com
+      #    server_port: 465
+      #    username: ${{ secrets.MAIL_USERNAME }}
+      #    password: ${{ secrets.MAIL_PASSWORD }}
+      #    subject: tmate ssh channle
+      #    body: file://mail.txt
+      #    to: zhangxueshan@hyron.com
+      #    from: GitHub Actions
+      #    content_type: text/html
+      - name: tmate sleep
+        run: sleep 18000
+      #- name: tmate sleep2
+      #  run: bash ./tmt.sh
